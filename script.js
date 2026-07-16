@@ -31,7 +31,7 @@ function setTheme(theme) {
   }
 
   // Spara valt tema i localStorage
-  localStorage.setItem("chosen-Theme", theme);
+  localStorage.setItem("chosen-theme", theme);
 
 }
 
