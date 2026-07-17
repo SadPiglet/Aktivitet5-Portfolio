@@ -18,6 +18,8 @@
   --divider: rgba(201, 125, 139, 0.15);
   --nav-hover: rgba(201, 125, 139, 0.2);
   --hero-glow: 3px 4px 6px rgba(185, 80, 108, 0.6);
+  --nav-active-shadow: 3px 3px 3px rgba(80, 30, 50, 0.4);
+  --nav-active-color: var(--hover);
 }
 
 /* --- 1b. Tema 2: Purple Sunset/Dark --- */
@@ -33,7 +35,12 @@ body.theme-purple-sunset {
   --box-shdw: 0 4px 20px rgba(244, 193, 84, 0.677);
   --divider: rgba(201, 125, 139, 0.2);
   --nav-hover: rgba(194, 102, 167, 0.2);
-  --hero-glow: 0 0 20px var(--accent), 0 0 40px var(--accent);
+  --hero-glow: 
+    0 4px 8px rgba(0, 0, 0, 0.5), 
+    0 0 20px var(--accent), 
+    0 0 40px var(--accent);
+  --nav-active-shadow: 0 0 10px var(--accent);
+  --nav-active-color: var(--accent);
 }
 
 /* 1c. Tema 3: Mountain Lake/Light --- */
@@ -49,7 +56,12 @@ body.theme-mountain-lake {
   --box-shdw: 0 4px 20px rgba(101, 206, 235, 0.537);
   --divider: rgba(176, 208, 216, 0.2);
   --nav-hover: rgba(176, 208, 216, 0.2);
-  --hero-glow: 0 0 20px var(--accent), 0 0 40px var(--accent);
+  --hero-glow: 
+    0 4px 8px rgba(0, 0, 0, 0.5), 
+    0 0 20px var(--accent), 
+    0 0 40px var(--accent);
+  --nav-active-shadow: 0 0 10px var(--accent);
+  --nav-active-color: var(--accent);
 }
 
 /* --- 2. Bas --- */
@@ -67,6 +79,10 @@ body {
   min-height: 100vh;
   transition: background 0.5s, color 0.5s;
   animation: fadeIn 0.8s ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* --- Fade-in animation ---*/
@@ -97,7 +113,7 @@ nav a {
   text-decoration: none;
   font-weight: 700;
   letter-spacing: 1px;
-  transition: all 0.3;
+  transition: ease-in-out 0.5s;
   padding: 6px 12px;
   border-radius: 9px;
 }
@@ -105,6 +121,42 @@ nav a {
 nav a:hover {
   color: var(--bg);
   background: var(--hover);
+  box-shadow: var(--box-shdw);
+}
+
+nav a.active {
+  color: var(--nav-active-color);
+  border-bottom: 2px solid var(--nav-active-color);
+  padding-bottom: 4px;
+  text-shadow: var(--nav-active-shadow);
+}
+
+/* --- 3b - Back to top-knapp ---*/
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--card);
+  color: var(--heading);
+  border: 2px solid var(--border);
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2em;
+  z-index: 100;
+  transition: all 0.3s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#back-to-top:hover {
+  background: var(--hover);
+  color: var(--bg);
   box-shadow: var(--box-shdw);
 }
 
@@ -272,10 +324,12 @@ p {
   transition: box-shadow 0.5s;
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.05);
+  transition: ease-in-out 0.5s;
 }
 
 .project-card:hover {
   box-shadow: var(--box-shdw);
+  transform: translateY(-10px);
 }
 
 .project-img {
