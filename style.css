@@ -325,6 +325,7 @@ p {
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.05);
   transition: ease-in-out 0.5s;
+  align-self: flex-start;
 }
 
 .project-card:hover {
@@ -378,6 +379,47 @@ p {
   background: var(--hover);
   transform: translateY(-2px);
   box-shadow: var(--box-shdw);
+}
+
+/* Expanderbar detalj-sektion */
+.expand-btn {
+  background: none;
+  border: 2px solid var(--border);
+  color: var(--accent);
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.85em;
+  margin: 8px 0;
+  transition: all 0.3s;
+}
+
+.expand-btn:hover  {
+  background: var(--nav-hover);
+}
+
+.expand-btn.open {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.project-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  text-align: left;
+  font-size: 0.9em;
+}
+
+.project-details.open {
+  max-height: 500px;
+  transition: max-height 0.5s ease-in;
+}
+
+.project-details p {
+  margin: 8px 0;
+  opacity: 0.85;
 }
 
 /* --- 10. Future & Contact --- */

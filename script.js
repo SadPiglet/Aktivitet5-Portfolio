@@ -66,5 +66,29 @@ window.addEventListener("scroll", function() {
 });
 
 backToTopBtn.addEventListener("click", function() {
-  window.scrollTo({ top:0, behavior: "smooth" });
+  smoothScrollToTop(1500);
+});
+
+// Expanderbara projektkort - endast ett öppet åt gången
+document.querySelectorAll(".expand-btn").forEach(function(btn) {
+  btn.addEventListener("click", function() {
+    let details = this.nextElementSibling;
+    let isOpen = details.classList.contains("open");
+
+    // Stäng ALLA andra öppna detaljer
+    document.querySelectorAll(".project-details").forEach(function(otherDetails) {
+      otherDetails.classList.remove("open");
+    });
+    document.querySelectorAll(".expand-btn").forEach(function(otherBtn) {
+      otherBtn.classList.remove("open");
+      otherBtn.textContent = "Read more ▼";
+    });
+
+    // Öppna detta kort om det inte redan var öppet
+    if (!isOpen) {
+      details.classList.add("open");
+      this.classList.add("open");
+      this.textContent = "Read less ▲";
+    }
+  });
 });
