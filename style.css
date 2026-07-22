@@ -8,7 +8,7 @@
 :root {
   --bg: #fdf4f0;
   --card: #fefaf9;
-  --text: #4a3040;
+  --text: #6b4a5a;
   --heading: #c97d8b;
   --accent: #e0a8b8;
   --border: rgba(201, 125, 139, 0.25);
@@ -20,6 +20,8 @@
   --hero-glow: 3px 4px 6px rgba(185, 80, 108, 0.6);
   --nav-active-shadow: 3px 3px 3px rgba(80, 30, 50, 0.4);
   --nav-active-color: var(--hover);
+  --btn-bg: #b05a6e;
+  --btn-text: #ffffff;
 }
 
 /* --- 1b. Tema 2: Purple Sunset/Dark --- */
@@ -41,6 +43,8 @@ body.theme-purple-sunset {
     0 0 40px var(--accent);
   --nav-active-shadow: 0 0 10px var(--accent);
   --nav-active-color: var(--accent);
+  --btn-bg: var(--accent);
+  --btn-text: var(--bg);
 }
 
 /* 1c. Tema 3: Mountain Lake/Light --- */
@@ -62,6 +66,8 @@ body.theme-mountain-lake {
     0 0 40px var(--accent);
   --nav-active-shadow: 0 0 10px var(--accent);
   --nav-active-color: var(--accent);
+  --btn-bg: var(--accent);
+  --btn-text: var(--bg);
 }
 
 /* --- 2. Bas --- */
@@ -365,8 +371,8 @@ p {
 
 .btn {
   display: inline-block;
-  background: var(--accent);
-  color: var(--bg);
+  background: var(--btn-bg);
+  color: var(--btn-text);
   padding: 10px 20px;
   border-radius: 20px;
   text-decoration: none;
