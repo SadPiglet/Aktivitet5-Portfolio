@@ -193,6 +193,7 @@ h2 {
 p {
   margin-bottom: 15px;
   font-size: 1.1em;
+  font-weight: 500;
 }
 
 /* --- Divider --- */
@@ -249,7 +250,7 @@ p {
 
 .hero .tagline {
   font-size: 1.2em;
-  color: var(--accent);
+  color: var(--heading);
   margin-bottom: 25px;
 }
 
@@ -257,6 +258,7 @@ p {
   font-size: 1em;
   opacity: 0.8;
   max-width: 500px;
+  font-weight: 500;
 }
 
 /* --- 8. Timeline --- */
