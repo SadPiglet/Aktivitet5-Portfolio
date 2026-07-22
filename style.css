@@ -142,8 +142,8 @@ nav a.active {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: var(--card);
-  color: var(--heading);
+  background: var(--btn-bg);
+  color: var(--btn-text);
   border: 2px solid var(--border);
   padding: 10px 15px;
   border-radius: 50%;
@@ -205,8 +205,8 @@ p {
 
 /* --- 6. Temaknappar --- */
 .theme-btn {
-  background: var(--card);
-  color: var(--heading);
+  background: var(--btn-bg);
+  color: var(--btn-text);
   border: 3px solid var(--border);
   padding: 4px 6px;
   border-radius: 50%;

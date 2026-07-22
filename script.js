@@ -66,7 +66,7 @@ window.addEventListener("scroll", function() {
 });
 
 backToTopBtn.addEventListener("click", function() {
-  smoothScrollToTop(1500);
+  window.scrollTo({ top:0, behavior: "smooth" });
 });
 
 // Expanderbara projektkort - endast ett öppet åt gången
