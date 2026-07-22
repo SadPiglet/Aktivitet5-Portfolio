@@ -14,16 +14,16 @@
 <body>
 
   <!-- === Navigation === -->
-  <nav>
+  <nav aria-label="Main navigation">
     <a href="index.html" >Home</a>
     <a href="education.html" >Education</a>
     <a href="projects.html" class="active">Projects</a>
     <a href="future.html" >Future & Contact</a>
 
     <!-- === Theme buttons === -->
-    <button id="theme-pink" class="theme-btn active" title="Cherry Blossom">🌸</button>
-    <button id="theme-purple" class="theme-btn" title="Purple Sunset">🌙</button>
-    <button id="theme-blue" class="theme-btn" title="Blue Mountain">🏔️</button>
+    <button id="theme-pink" class="theme-btn active" aria-label="Cherry Blossom theme">🌸</button>
+    <button id="theme-purple" class="theme-btn" aria-label="Purple Sunset theme">🌙</button>
+    <button id="theme-blue" class="theme-btn" aria-label="Blue Mountain theme">🏔️</button>
   </nav>
 
   <!-- === Main content === -->
@@ -45,14 +45,14 @@
         </div>
 
         <!-- Expanderbar detalj-sektion -->
-        <button class="expand-btn">Read more ▼</button>
+        <button class="expand-btn" aria-expanded="false">Read more ▼</button>
         <div class="project-details">
           <p>This was my first web project. I learned about semantic HTML, CSS variables, pseudo-elements, and how to build an accordion from scratch. The retro pixel theme was inspired by old NES games and CRT monitors.</p>
           <p><strong>Challenges:</strong> Getting the accordion to work with JavaScript and making the scanlines look authentic.</p>
           <p><strong>What I learned:</strong> DOM manipulation, event listeners, and responsive design basics.</p>
         </div>
 
-        <a href="https://sadpiglet.github.io/Webbens-historia-aktivitet1/" class="btn">Go to website</a>
+        <a href="https://sadpiglet.github.io/Webbens-historia-aktivitet1/" class="btn" aria-label="View project: History of the Web">Go to website</a>
       </article>
 
       <article class="project-card">
@@ -63,7 +63,7 @@
           <span>HTML</span>
           <span>CSS</span>
         </div>
-        <a href="https://sadpiglet.github.io/Presentationssida-aktivitet2/" class="btn">Go to website</a>
+        <a href="https://sadpiglet.github.io/Presentationssida-aktivitet2/" class="btn" aria-label="View project: Portfolio version 1">Go to website</a>
       </article>
 
       <article class="project-card">
@@ -75,7 +75,7 @@
           <span>JavaScript</span>
           <span>CSS</span>
         </div>
-        <a href="https://sadpiglet.github.io/Aktivitet3-JS-DOM/" class="btn">Go to website</a>
+        <a href="https://sadpiglet.github.io/Aktivitet3-JS-DOM/" class="btn" aria-label="View project: Monster hunter wilds checklist">Go to website</a>
       </article>
 
       <article class="project-card">
@@ -97,7 +97,7 @@
 
   <footer>SadPiglet - 2026</footer>
 
-  <button id="back-to-top" title="Back to top">↑</button>
+  <button id="back-to-top" aria-label="Scroll to top of page" title="Back to top">↑</button>
 
   <script src="script.js"></script>
 </body>
