@@ -391,8 +391,8 @@ p {
 /* Expanderbar detalj-sektion */
 .expand-btn {
   background: none;
-  border: 2px solid var(--border);
-  color: var(--accent);
+  border: 2px solid var(--btn-bg);
+  color: var(--heading);
   padding: 6px 14px;
   border-radius: 8px;
   cursor: pointer;
@@ -422,6 +422,21 @@ p {
 .project-details.open {
   max-height: 500px;
   transition: max-height 0.5s ease-in;
+  overflow-y: auto;
+  transition: max-height 0.5s ease-in;
+}
+
+.project-details::-webkit-scrollbar {
+  width: 4px;
+}
+
+.project-details::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.project-details::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
 }
 
 .project-details p {
