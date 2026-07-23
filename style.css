@@ -426,6 +426,8 @@ p {
   transition: max-height 0.5s ease-in;
 }
 
+
+/* Scrollbar design - Opera, Edge, Safari, Chrome*/
 .project-details::-webkit-scrollbar {
   width: 4px;
 }
@@ -437,6 +439,12 @@ p {
 .project-details::-webkit-scrollbar-thumb {
   background: var(--accent);
   border-radius: 10px;
+}
+
+/* Scrollbar design - Firefox */
+.project-details {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
 }
 
 .project-details p {
